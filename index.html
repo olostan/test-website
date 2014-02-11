@@ -1,2 +1,11 @@
-Hello, <b>World!</b>
+Testing <b>World</b>
 <img src="img/olostan.jpg">
+<div>Here should be another template: {{template "another.html"}}</div>
+
+{{range $index, $element := .}}
+        <div style="border:solid 1px blue"><h4>{{$index}}</h4>
+        {{range $r := $element}}
+           <div style="border:solid 1px #999"><span>{{index $r 0}}:</span><span>{{index $r 1}}</span></div>
+        {{end}}
+        </div>
+{{end}}
